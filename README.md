@@ -1,5 +1,11 @@
 # Using Libs in Dune with OCaml
 
+## Update
+
+Project works now that to discord channel help. Big take-away is that you have ot have a `public name` on your libraries dune file so that it can be seen by your main module. Big because the docs say that argument is optional here: <https://dune.readthedocs.io/en/latest/dune-files.html#library>.
+
+## The Errors
+
 I cant seem to get libs recognized by the `main.ml` file.
 
 directoy structure is:
