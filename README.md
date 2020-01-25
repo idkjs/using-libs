@@ -51,3 +51,24 @@ The `lib` `dune` file is:
 ➜  main dune exec ./main.exe
 Hello, world!
 ```
+
+When I add `lib` to the `/main/dune` file I get an error saying it can't find the file.
+
+new dune is:
+
+```dune
+(executable
+  (name main)
+  (libraries lib))
+```
+
+```sh
+➜  using-libs [master*]main
+➜  main [master*]dune clean
+➜  main [master*]dune build main.exe
+File "dune", line 3, characters 13-16:
+3 |   (libraries lib))
+                 ^^^
+Error: Library "lib" not found.
+Hint: try: dune external-lib-deps --missing main.exe
+```
